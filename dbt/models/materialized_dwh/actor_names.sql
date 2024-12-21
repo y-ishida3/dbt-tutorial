@@ -4,14 +4,14 @@
     )
 }}
 
-SELECT
+select
     a.actor_id
-    , CONCAT(a.first_name, ' ', a.last_name) AS full_name
-FROM
-    dvdrental.public.actor AS a
+    , concat(a.first_name, ' ', a.last_name) as full_name
+from
+    dvdrental.public.actor as a
 
 {% if is_incremental() %}
 
-    WHERE a.actor_id NOT IN (SELECT an.actor_id FROM {{ this }} AS an)
+    where a.actor_id not in (select an.actor_id from {{ this }} as an)
 
 {% endif %}
