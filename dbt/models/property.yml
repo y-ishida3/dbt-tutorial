@@ -5,8 +5,8 @@ models:
     columns:
       - name: actor_id
         tests:
-	        - unique
-	        - not_null
-      - name: full_name 
+          - unique
+          - not_null
+      - name: full_name
         tests:
-	        - not_null
+          - not_null
