@@ -21,10 +21,10 @@ aliasing = explicit
 apply_dbt_builtins = True 
 
 [sqlfluff:rules:capitalisation.keywords]
-capitalisation_policy = upper 
+capitalisation_policy = lower 
 
 [sqlfluff:rules:capitalisation.functions]
-extended_capitalisation_policy = upper 
+extended_capitalisation_policy = lower 
 
 [sqlfluff:layout:type:comma]
 line_position = leading
