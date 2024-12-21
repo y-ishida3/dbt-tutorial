@@ -7,6 +7,16 @@ project_dir = ./
 profiles_dir = ~/.dbt
 target = dev
 
+[sqlfluff:indentation]
+tab_space_size = 4
+allow_implicit_indents = true
+
+[sqlfluff:rules:aliasing.table]
+aliasing = explicit
+
+[sqlfluff:rules:aliasing.column]
+aliasing = explicit
+
 [sqlfluff:templater:jinja]
 apply_dbt_builtins = True 
 
