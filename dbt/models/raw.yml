@@ -5,7 +5,12 @@ sources:
     schema: public 
     tables:
       - name: actor
+        description: >
+          Actor table identifies every actor 
         columns:
           - name: actor_id 
             tests:
               - unique
+    freshness: # default freshness
+      warn_after: {count: 1, period: day}
+    loaded_at_field: last_update
