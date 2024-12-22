@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: dvdrental
+    schema: public 
+    tables:
+      - name: actor

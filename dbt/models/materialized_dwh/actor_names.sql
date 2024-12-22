@@ -8,7 +8,7 @@ select
     a.actor_id
     , concat(a.first_name, ' ', a.last_name) as full_name
 from
-    dvdrental.public.actor as a
+    {{ source('dvdrental', 'actor') }} as a
 
 {% if is_incremental() %}
 
