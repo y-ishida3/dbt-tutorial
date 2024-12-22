@@ -2,11 +2,14 @@ version: 2
 
 models:
   - name: actor_names
+    description: 'ユーザー事にフルネームを結合したview'
     columns:
       - name: actor_id
+        description: 'actorのid'
         tests:
           - unique
           - not_null
       - name: full_name
+        description: 'actorのフルネーム'
         tests:
           - not_null
