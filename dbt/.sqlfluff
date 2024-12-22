@@ -1,0 +1,30 @@
+[sqlfluff]
+dialect = postgres 
+templater = dbt
+
+[sqlfluff:templater:dbt]
+project_dir = ./
+profiles_dir = ~/.dbt
+target = dev
+
+[sqlfluff:indentation]
+tab_space_size = 4
+allow_implicit_indents = true
+
+[sqlfluff:rules:aliasing.table]
+aliasing = explicit
+
+[sqlfluff:rules:aliasing.column]
+aliasing = explicit
+
+[sqlfluff:templater:jinja]
+apply_dbt_builtins = True 
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower 
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower 
+
+[sqlfluff:layout:type:comma]
+line_position = leading
