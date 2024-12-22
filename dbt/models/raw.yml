@@ -5,3 +5,7 @@ sources:
     schema: public 
     tables:
       - name: actor
+        columns:
+          - name: actor_id 
+            tests:
+              - unique
