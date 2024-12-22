@@ -6,7 +6,7 @@
 
 select
     a.actor_id
-    , concat(a.first_name, ' ', a.last_name) as full_name
+    , {{ get_full_name('first_name', 'last_name') }} as full_name
 from
     {{ source('dvdrental', 'actor') }} as a
 
